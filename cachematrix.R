@@ -15,7 +15,7 @@ makeCacheMatrix <- function(x = matrix()) {
 	setinv <- function(solve) inv <<- solve						# defines 'setinv' as the function solve(inv) to calculate the inverse of x
 	getinv <- function() inv								# defines 'getinv' as inv - the actual inverse matrix
 	LST<<-list(set = set, get = get, setinv = setinv, getinv = getinv)	# creates a cached list of (set, get, setinv, getinv)
-}													# For reference in the comments below, this list is LST
+}													
 
 
 ## returns the inverse of matrix x - either the cached value or calculated on the spot and assigned to the cache
@@ -34,3 +34,5 @@ cacheSolve <- function(x, ...) {
 }								# Note that without the message("...") part, we know this was calculated
 
 
+# Odd assignment based on the lecture notes and what was explained. It felt as though there were some logical steps that were missing
+# in the course. Perhaps for future, 
